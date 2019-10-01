@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assests/images/Serler-logo.png";
 import icon_logout from "../assests/images/logout.png";
+import icon_upload from "../assests/images/upload_icon.png";
 
 export default class Header extends Component {
   render() {
@@ -28,16 +29,22 @@ export default class Header extends Component {
             </div>
           </div>
           <div className="col s2">
-            <Link to="/Bibtex" style={{ float: "right" }}>
-              <img
-                src={icon_logout}
-                alt="Bibtex"
-                style={{ height: 30, width: 30, marginTop: 15 }}
-              />
-            </Link>
+            <div className="row" style={{ marginBottom: 0, align: "center" }}>
+              <Link to="/bibtex">
+                <img
+                  src={icon_upload}
+                  alt="Bibtex"
+                  style={{ height: 40, width: 40 }}
+                />
+              </Link>
+            </div>
+
+            <div className="row" style={{ marginTop: 0, align: "center" }}>
+              Upload Bibtex
+            </div>
           </div>
           <div className="col s1">
-            <Link to="/" style={{ float: "right" }}>
+            <Link to="/" style={{ float: "left" }}>
               <img
                 src={icon_logout}
                 alt="logout"
