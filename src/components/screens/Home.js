@@ -54,7 +54,7 @@ class Home extends Component {
 
   // -------------------------- FUNCTIONS --------------------------
 
-  // Change the condition of Title checkbox
+  // Set the value of Title checkbox
   toggleTitleCheckBox = () => {
     const { checkBox } = this.state;
     this.setState({
@@ -65,7 +65,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Author checkbox
+  // Set the value of Author checkbox
   toggleAuthorCheckBox = () => {
     const { checkBox } = this.state;
     this.setState({
@@ -76,7 +76,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Type checkbox
+  // Set the value of Type checkbox
   toggleTypeCheckBox = () => {
     const { checkBox } = this.state;
     this.setState({
@@ -87,7 +87,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Issued On checkbox
+  // Set the value of Issued On checkbox
   toggleIssuedOnCheckBox = () => {
     const { checkBox } = this.state;
     this.setState({
@@ -98,7 +98,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Publisher checkbox
+  // Set the value of Publisher checkbox
   togglePublisherCheckBox = () => {
     const { checkBox } = this.state;
     this.setState({
@@ -109,7 +109,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of DOI checkbox
+  // Set the value of DOI checkbox
   toggleDoiCheckBox = () => {
     const { checkBox } = this.state;
     this.setState({
@@ -120,7 +120,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Rating checkbox
+  // Set the value of Rating checkbox
   toggleRatingCheckBox = () => {
     const { checkBox } = this.state;
     this.setState({
@@ -131,14 +131,14 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Search checkbox
+  // Set the value of Search checkbox
   onTextInputSearchChange = event => {
     this.setState({
       search: event.target.value
     });
   };
 
-  // Change the condition of Filter Title checkbox
+  // Set the value of Filter Title checkbox
   togglFilterTitleCheckBox = () => {
     const { filterTitle } = this.state;
     this.setState({
@@ -149,7 +149,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Filter Author checkbox
+  // Set the value of Filter Author checkbox
   togglFilterAuthorCheckBox = () => {
     const { filterAuthor } = this.state;
     this.setState({
@@ -160,7 +160,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Filter Publisher checkbox
+  // Set the value of Filter Publisher checkbox
   togglFilterPublisherCheckBox = () => {
     const { filterPublisher } = this.state;
     this.setState({
@@ -171,7 +171,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Method Filter dropdown
+  // Set the value of Method Filter dropdown
   onDropDownMethodChange = event => {
     this.setState({
       method: event.target.value
@@ -192,7 +192,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Title Conditioner dropdown
+  // Set the value of Title Conditioner dropdown
   onDropDownTitleChange = event => {
     const { filterTitle } = this.state;
     this.setState({
@@ -203,7 +203,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Author Conditioner dropdown
+  // Set the value of Author Conditioner dropdown
   onDropDownAuthorChange = event => {
     const { filterAuthor } = this.state;
     this.setState({
@@ -214,7 +214,7 @@ class Home extends Component {
     });
   };
 
-  // Change the condition of Title Conditioner dropdown
+  // Set the value of Title Conditioner dropdown
   onDropDownPublisherChange = event => {
     const { filterPublisher } = this.state;
     this.setState({
