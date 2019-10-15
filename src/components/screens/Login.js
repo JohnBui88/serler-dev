@@ -25,7 +25,7 @@ class Login extends Component {
         <img
           src={logo}
           alt="Logo"
-          style={{ height: 100, width: 100, float: "left" }}
+          style={{ height: 120, width: 120, float: "left" }}
         />
       </div>
     );
@@ -66,7 +66,7 @@ class Login extends Component {
           minHeight: "100vh",
           width: "100vw",
           backgroundImage: `url(${background_image})`,
-          backgroundSize: "cover"
+          backgroundSize: "100% 100%"
         }}
       >
         {this.renderHeader()}
