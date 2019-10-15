@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import MaterialTable from "material-table";
-import DatePicker from "react-datepicker";
+//import DatePicker from "react-datepicker";
 import YearPicker from "react-year-picker";
 import "react-datepicker/dist/react-datepicker.css";
 import M from "materialize-css";
@@ -31,7 +31,8 @@ class Home extends Component {
         seMethod: true,
         seMethodology: true,
         title: true,
-        type: true
+        type: true,
+        year: true
       },
       field: [
         {
@@ -234,6 +235,17 @@ class Home extends Component {
       checkBox: {
         ...checkBox,
         type: !checkBox.type
+      }
+    });
+  };
+
+  // Set the value of Year checkbox
+  toggleYearCheckBox = () => {
+    const { checkBox } = this.state;
+    this.setState({
+      checkBox: {
+        ...checkBox,
+        year: !checkBox.year
       }
     });
   };
@@ -813,6 +825,17 @@ class Home extends Component {
               />
               <span>Type</span>
             </label>
+
+            <label className="col">
+              <input
+                type="checkbox"
+                checked={checkBox.year}
+                onChange={() => {
+                  this.toggleYearCheckBox();
+                }}
+              />
+              <span>Year</span>
+            </label>
           </div>
         </div>
       </div>
@@ -860,6 +883,9 @@ class Home extends Component {
         ...columns,
         { title: "Research Result", field: "researchResult" }
       ];
+    }
+    if (checkBox.year) {
+      columns = [...columns, { title: "Year", field: "year" }];
     }
     if (checkBox.analyst) {
       columns = [...columns, { title: "Analyst", field: "analyst" }];
